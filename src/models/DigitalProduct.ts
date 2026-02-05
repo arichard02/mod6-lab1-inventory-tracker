@@ -1,7 +1,7 @@
 import { Product } from "./Product.js";
 
 export class DigitalProduct extends Product {
-  fileSize: number;
+  private fileSize: number;
 
   constructor(sku: string, name: string, price: number, fileSize: number) {
     super(sku, name, price);
@@ -15,16 +15,14 @@ export class DigitalProduct extends Product {
   getFilesize(): string {
     return `${this.fileSize} mb`;
   }
+
+  displayDetails(): string {
+  return `${super.displayDetails()}, File size: ${this.getFilesize()}`;
 }
 
-console.log(
-  "first",
-  new DigitalProduct("test", "lorem", 12, 10).displayDetails(),
-);
+}
 
-console.log(
-  "sec",
-  new DigitalProduct("test", "lorem", 12, 10).getPriceWithTax(),
-);
 
-console.log("sec", new DigitalProduct("test", "lorem", 12, 10).getFilesize());
+
+
+
