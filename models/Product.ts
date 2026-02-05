@@ -49,5 +49,5 @@ export class Product {
 }
 
 
-// console.log("first", new Product("test", "lorem", 12).displayDetails());
-// console.log("sec", new Product("test", "lorem", 12).getPriceWithTax());
+console.log("first", new Product("test", "lorem", 12).displayDetails());
+console.log("sec", new Product("test", "lorem", 12).getPriceWithTax());
